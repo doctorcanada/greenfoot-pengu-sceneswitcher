@@ -67,38 +67,40 @@ public class Pengu extends Mover
     private void checkBounds()
     {
         // check right bound
-        if ( getX() >= getWorld().getWidth() - 5 )
+        if ( getX() > (getWorld().getWidth() - 5) )
         {
+            /* 
+             * if the current scene is Scene1, then set the world to 
+             * Scene2, and set the location of the "new" Pengu object
+             * to be 5 pixels inside the LEFT edge of the world. 
+             */ 
             if ( this.getWorld().getClass().equals( Scene1.class ) )
             {
-                //int newSceneNumber = 2;
-                //Greenfoot.setWorld( new Scene2( newSceneNumber, 0, getY() ) );
-                Greenfoot.setWorld( new Scene2( 0, getY() ) );
+                Greenfoot.setWorld( new Scene2( 5, getY() ) );
             }
-            else
+            else // otherwise, assume current scene is Scene2, so set to Scene1
             {
-                //int newSceneNumber = 1;
-                //Greenfoot.setWorld( new Scene1( newSceneNumber, 0, getY() ) );
-                Greenfoot.setWorld( new Scene1( 0, getY() ) );
-            }
-        }
+                Greenfoot.setWorld( new Scene1( 5, getY() ) );
+            } // end inner if/else
+        } // end outer if
         
         // check left bound
-        if ( getX() <= 5 )
+        if ( getX() < 5 )
         {
+            /* 
+             * if the current scene is Scene1, then set the world to 
+             * Scene2, and set the location of the "new" Pengu object
+             * to be 5 pixels inside the RIGHT edge of the world. 
+             */ 
             if ( this.getWorld().getClass().equals( Scene1.class ) )
             {
-                //int newSceneNumber = 2;
-                //Greenfoot.setWorld( new Scene2(newSceneNumber, getWorld().getWidth(), getY()) );
-                Greenfoot.setWorld( new Scene2( getWorld().getWidth(), getY()) );
+                Greenfoot.setWorld( new Scene2( (getWorld().getWidth() - 5), getY()) );
             }
-            else
+            else // otherwise, assume current scene is Scene2, so set to Scene1
             {
-                //int newSceneNumber = 1;
-                //Greenfoot.setWorld( new Scene1(newSceneNumber, getWorld().getWidth(), getY()) );
-                Greenfoot.setWorld( new Scene1( getWorld().getWidth(), getY()) );
-            }
-        }
+                Greenfoot.setWorld( new Scene1( (getWorld().getWidth() - 5), getY()) );
+            } // end inner if/else f
+        } // end outer if
     } // end method checkBounds
 } // end class Pengu
 
