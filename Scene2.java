@@ -7,7 +7,7 @@ import greenfoot.*;
  * @author bcanada@uscb.edu
  * @version 2016.12.09
  */
-public class Scene2 extends Scene
+public class Scene2 extends World
 {
     /**
      * This version of the Scene2 constructor sets
@@ -16,28 +16,31 @@ public class Scene2 extends Scene
      */
     public Scene2()
     {    
-        super(750, 500, 1, 66, 244); // define size (x, y), cellSize,
-                                     // and starting position (x, y) of Pengu
+        super(750, 500, 1); 
 
         addObject ( new Cliff(false), 85, 441);
         addObject ( new Cliff(true), 665, 441);
         
         addObject ( new Cloud(), 369, 315 );
+        
+        addObject ( new Pengu(), 66, 244 );
     } // end no-arg Scene2 constructor
 
     /**
-     * Overloaded version of the Scene1 constructor that accepts
+     * Overloaded version of the Scene2 constructor that accepts
      * two parameters: the (1) x-coordinate and (2) y-coordinate 
      * where a "new" Pengu object  will be "re-instantiated" 
      */
     public Scene2( int x, int y )
     {    
-        super(750, 500, 1, x, y); 
+        super(750, 500, 1); 
 
         addObject ( new Cliff(false), 85, 441);
         addObject ( new Cliff(true), 665, 441);
         
         addObject ( new Cloud(), 369, 315 );
-    } // end 2-arg Scene1 constructor 
+        
+        addObject ( new Pengu(), x, y );
+    } // end 2-arg Scene2 constructor 
     
 } // end class Scene2

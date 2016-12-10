@@ -7,7 +7,7 @@ import greenfoot.*;
  * @author bcanada@uscb.edu
  * @version 2016.12.09
  */
-public class Scene1 extends Scene
+public class Scene1 extends World
 {
     /**
      * This version of the Scene1 constructor sets
@@ -16,13 +16,14 @@ public class Scene1 extends Scene
      */
     public Scene1()
     {    
-        super(750, 500, 1, 66, 244); // define size (x, y), cellSize,
-                                     // and starting position (x, y) of Pengu
+        super(750, 500, 1); 
 
         addObject ( new Cliff(false), 85, 441);
         addObject ( new Cliff(true), 665, 441);
         
         addObject ( new Cloud(), 369, 315 );
+        
+        addObject ( new Pengu(), 66, 244 );
     } // end no-arg Scene1 constructor
 
     /**
@@ -32,12 +33,14 @@ public class Scene1 extends Scene
      */
     public Scene1( int x, int y )
     {    
-        super(750, 500, 1, x, y); 
+        super(750, 500, 1); 
 
         addObject ( new Cliff(false), 85, 441);
         addObject ( new Cliff(true), 665, 441);
         
         addObject ( new Cloud(), 369, 315 );
+        
+        addObject ( new Pengu(), x, y );
     } // end 2-arg Scene1 constructor 
     
 } // end class Scene2
