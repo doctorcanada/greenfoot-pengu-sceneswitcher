@@ -5,7 +5,7 @@ import greenfoot.*;
  * (Adapted from the Scene class in the original pengu scenario)
  * 
  * @author bcanada@uscb.edu
- * @version 2016.12.09
+ * @version 2016.12.10
  */
 public class Scene2 extends World
 {
