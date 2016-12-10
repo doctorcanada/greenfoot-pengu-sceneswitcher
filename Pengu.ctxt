@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=newSceneNumber
-comment0.target=Pengu(int)
+comment0.params=
+comment0.target=Pengu()
 comment1.params=
 comment1.target=void\ act()
 comment2.params=

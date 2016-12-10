@@ -2,7 +2,7 @@
 comment0.params=
 comment0.target=Scene1()
 comment0.text=\n\ This\ version\ of\ the\ Scene1\ constructor\ sets\n\ the\ Pengu\ object\ at\ the\ default\ starting\ location\n\ of\ x\ \=\ 66,\ y\ \=\ 244\n
-comment1.params=sceneNum\ x\ y
-comment1.target=Scene1(int,\ int,\ int)
-comment1.text=\n\ Overloaded\ version\ of\ the\ Scene1\ constructor\ that\ accepts\n\ three\ parameters\:\n\ --\ (1)\ the\ new\ scene\ number\ \n\ --\ the\ (2)\ x-coordinate\ and\ (2)\ y-coordinate\ where\ a\ "new"\ \n\ \ \ \ Pengu\ object\ \ will\ be\ "re-instantiated"\ \n
+comment1.params=x\ y
+comment1.target=Scene1(int,\ int)
+comment1.text=\n\ Overloaded\ version\ of\ the\ Scene1\ constructor\ that\ accepts\n\ two\ parameters\:\ the\ (1)\ x-coordinate\ and\ (2)\ y-coordinate\ \n\ where\ a\ "new"\ Pengu\ object\ \ will\ be\ "re-instantiated"\ \n
 numComments=2

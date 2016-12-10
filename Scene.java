@@ -7,25 +7,26 @@ import greenfoot.*;
  * @author bcanada@uscb.edu
  * @version 2016.12.09
  */
-public class GameManager extends World
+public class Scene extends World
 {
     /**
-     * Constructor for objects of class GameManager.
+     * Constructor for objects of class Scene (a generic Scene).
      * Used to initialize world-width, world-height, world-cellSize,
-     *    scene number, and the x- and y- coordinates of the 
-     *    current Pengu object
+     *    and the x- and y- coordinates where the Pengu object 
+     *    will be "re-instantiated" for the new scene
      */
-    public GameManager( int width, int height, int cellSize, 
-                        int sceneNum, int x, int y )
+    public Scene( int width, int height, int cellSize, int x, int y )
     {    
+        // pass the width, height, and cellSize up to the
+        // constructor for the parent class (World) 
         super( width, height, cellSize ); 
         
         /* 
          * adds "new" Pengu to whatever the new scene number is
          * at the specified coordinates
          */
-        addObject ( new Pengu( sceneNum ), x, y );
+        addObject ( new Pengu(), x, y );
         
-    } // end GameManager 6-arg constructor
+    } // end Scene 5-arg constructor
     
 } // end class GameManager

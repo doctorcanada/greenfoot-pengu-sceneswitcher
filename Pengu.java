@@ -6,11 +6,11 @@ import greenfoot.*;
 public class Pengu extends Mover
 {
     private static final int jumpStrength = 16;
-    private int currentSceneNumber;
+    //private int currentSceneNumber;
     
-    public Pengu( int newSceneNumber )
+    public Pengu()
     {
-        this.currentSceneNumber = newSceneNumber;
+        //this.currentSceneNumber = newSceneNumber;
     }
     
     public void act() 
@@ -69,30 +69,34 @@ public class Pengu extends Mover
         // check right bound
         if ( getX() >= getWorld().getWidth() - 5 )
         {
-            if ( currentSceneNumber == 1 )
+            if ( this.getWorld().getClass().equals( Scene1.class ) )
             {
-                int newSceneNumber = 2;
-                Greenfoot.setWorld( new Scene2( newSceneNumber, 0, getY() ) );
+                //int newSceneNumber = 2;
+                //Greenfoot.setWorld( new Scene2( newSceneNumber, 0, getY() ) );
+                Greenfoot.setWorld( new Scene2( 0, getY() ) );
             }
             else
             {
-                int newSceneNumber = 1;
-                Greenfoot.setWorld( new Scene1( newSceneNumber, 0, getY() ) );
+                //int newSceneNumber = 1;
+                //Greenfoot.setWorld( new Scene1( newSceneNumber, 0, getY() ) );
+                Greenfoot.setWorld( new Scene1( 0, getY() ) );
             }
         }
         
         // check left bound
         if ( getX() <= 5 )
         {
-            if ( currentSceneNumber == 1 )
+            if ( this.getWorld().getClass().equals( Scene1.class ) )
             {
-                int newSceneNumber = 2;
-                Greenfoot.setWorld( new Scene2( newSceneNumber, getWorld().getWidth(), getY() ) );
+                //int newSceneNumber = 2;
+                //Greenfoot.setWorld( new Scene2(newSceneNumber, getWorld().getWidth(), getY()) );
+                Greenfoot.setWorld( new Scene2( getWorld().getWidth(), getY()) );
             }
             else
             {
-                int newSceneNumber = 1;
-                Greenfoot.setWorld( new Scene1( newSceneNumber, getWorld().getWidth(), getY() ) );
+                //int newSceneNumber = 1;
+                //Greenfoot.setWorld( new Scene1(newSceneNumber, getWorld().getWidth(), getY()) );
+                Greenfoot.setWorld( new Scene1( getWorld().getWidth(), getY()) );
             }
         }
     } // end method checkBounds
